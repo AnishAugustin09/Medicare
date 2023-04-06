@@ -1,0 +1,8 @@
+com\healthcare\model\User.class
+com\healthcare\MedicareApplication.class
+com\healthcare\model\ProductEntity.class
+com\healthcare\repository\UserRepository.class
+com\healthcare\service\MedicareServiceIMPL.class
+com\healthcare\service\MedicareService.class
+com\healthcare\controller\MainController.class
+com\healthcare\repository\ProductRepository.class
