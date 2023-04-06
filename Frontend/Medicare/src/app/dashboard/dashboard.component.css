@@ -1,0 +1,8 @@
+.nav a:hover{
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+    
+    background-color: rgb(92, 168, 219);
+    border-radius: 20px;
+    
+}

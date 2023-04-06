@@ -1,0 +1,40 @@
+<div class="container mt-3">
+  <div class="card">
+    <div class="card text-bg-dark">
+      <img style=" height: 500px;"src="http://www.pixel-creation.com/wp-content/uploads/health-wallpapers-top-free-health-backgrounds-wallpaperaccess.jpg" class="card-img" alt="...">
+  
+      <div class="card-img-overlay">
+    <h1 style="color:white;">Welcome Admin</h1>
+    <h3 style="color:white;">Medicare Application Progress below</h3>
+
+    <ul class="nav " >
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/allProducts" style="font-size: 20px; color: white;"> 
+            Product-List
+          </a>
+        </li>&nbsp;&nbsp;
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/addProduct" style="font-size: 20px; color: white;">
+            Add-Product
+          </a>
+        </li>&nbsp;&nbsp;
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/alluser" style="font-size: 20px; color: white;">
+              User-List
+            </a>
+        </li>&nbsp;&nbsp;
+        <li class="nav-item">
+          <a class="nav-link" (click)="logout()" style="font-size: 20px; color: white;">
+           Logout
+          </a>
+      </li>&nbsp;&nbsp;
+        
+      </ul>
+      <router-outlet></router-outlet>   
+</div>
+</div>
+</div>
+</div>
+
+
+

@@ -1,0 +1,18 @@
+<div class="container col-md-4 mt-3 py-5 bg-light">
+    <h2><i class="fas fa-solid fa-lock-a"></i>&nbsp;Admin Login</h2><hr>
+<form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" placeholder="Enter Name" class="form-control" [(ngModel)]="login.email">
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="Enter Password" class="form-control" [(ngModel)]="login.password">
+    </div>
+    <p>Only Authorized user can access this page</p>
+    <br>
+    <button class="btn btn-primary" >Log In</button>
+
+</form>
+</div>
+

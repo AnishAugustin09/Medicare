@@ -1,0 +1,21 @@
+
+
+
+
+<div class="container mt-3">
+    <div class="row row-cols-md-4 ">
+<div class="card" style="width: 15rem; " *ngFor="let p of product | filter:searchkey:'name'">
+    <img src="{{p.image}}" class="card-img-top" alt="...">
+    <div class="card-body" >
+      <h5 class="card-title">{{p.name}}</h5>
+      <p class="card-text">{{p.seller}}</p>
+      <p class="card-text"style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{p.description}}</p>
+      <p class="card-text"><strong>Price :</strong>${{p.price}}</p>
+      
+      <button class="btn btn-primary" (click)=addtoCart(p)>Add to Cart
+      </button>
+     
+    </div>
+  </div>
+</div>
+</div>

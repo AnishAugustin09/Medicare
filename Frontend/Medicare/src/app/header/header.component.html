@@ -1,0 +1,30 @@
+<nav class="navbar navbar-light bg-info ">
+    <div class="container-fluid">
+      <div class="navbar-brand align-item-center d-flex">
+        <i style="font-size: 35px;" class="fa-solid fa-laptop-medical"></i>
+        <strong style="font-size: 25px;">Medicare</strong>
+      </div>
+     
+      
+      <div class="form-group">
+        
+          <input type="text" class="form-control" placeholder="search products eg: 'Dettol','First-Aid kit'" [(ngModel)]="search" (keyup)="searchproduct($event)">
+        
+      </div>
+      <span class="fas fa-search search-icon"></span>
+      
+
+      
+      <button class="btn btn-info">
+        <i style="font-size: 20px; color:black" class="fa-solid fa-user fa-flip" routerLink="/profile"></i>
+      </button>
+      <button class="btn btn-info">
+        <i style="font-size: 20px; color:black" class="fas fa-cart-plus" routerLink="/cart"></i>
+        <div class="badge bg-danger">{{totalItem}}</div>
+      </button>
+
+    </div>
+  </nav>
+<router-outlet></router-outlet>
+
+  

@@ -1,0 +1,37 @@
+
+<ng-container  *ngIf="profile.length>0">
+
+    <div class="container mt-3 col-md-5 " *ngFor="let x of profile">
+        <a routerLink="/Home"><i class="fa-solid fa-arrow-left"></i></a><h3>Hello {{x.fname}} <i class="fa-solid fa-circle-user"></i></h3>
+        <hr>
+        <div class="item "></div>
+        <label for="fname">First Name</label>
+        <input type="text" name="fname" id="fname" placeholder="anish1234-03@upi.com" class="form-control  " value="{{x.fname}}">
+        <label for="lname">Last Name</label>
+        <input type="text" name="lname" id="lname" placeholder="anish1234-03@upi.com" class="form-control  " value="{{x.lname}}">
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" placeholder="anish1234-03@upi.com" class="form-control  " value="{{x.email}}">
+        <label for="address">Address</label>
+        <input type="text" name="address" id="address" placeholder="anish1234-03@upi.com" class="form-control  " value="{{x.address}}">
+        <label for="city">City</label>
+        <input type="text" name="city" id="city" placeholder="anish1234-03@upi.com" class="form-control  " value="{{x.city}}">
+        <label for="state">State</label>
+        <input type="text" name="state" id="state" placeholder="anish1234-03@upi.com" class="form-control  " value="{{x.state}}">
+        <hr>
+        <button class="btn btn-primary" routerLink="/updateUser/{{x.email}}"><i class="fas fa-light fa-wrench"></i> &nbsp;Update</button>&nbsp;
+        <button class="btn btn-danger" (click)="logout()"><i class="fa-solid fa-right-from-bracket"></i> logout</button>
+
+    </div>
+</ng-container>
+
+<ng-container *ngIf="profile.length==0">
+    <div class="container mt-5">
+        <div class="justify-content-center">
+            <h2 >Hi User,</h2>
+            <h3> Please Login First </h3>
+            <button class="btn btn-primary">
+            <a routerLink="/login" style="color:white; text-decoration: none;">Login&nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+        </button>
+        </div>
+    </div>
+</ng-container>

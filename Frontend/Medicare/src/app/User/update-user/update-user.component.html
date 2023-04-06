@@ -1,0 +1,47 @@
+<div class="container mt-3 col-md-5">
+    <form (ngSubmit)="onSubmit()" >
+        <a routerLink="/profile"><i class="fa-solid fa-arrow-left"></i></a><h3>Update Profile</h3>
+        <hr>
+        <div class="form-group" >
+            <label for="fname">First Name</label>
+            <input type="text" name="fname" id="fname" placeholder="Enter Name" class="form-control" [(ngModel)]="user.fname">
+        </div>
+        <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" name="lname" id="lname" placeholder="Enter Name" class="form-control" [(ngModel)]="user.lname">
+        </div>
+        <div class="form-group">
+            <label for="mobile">Mobile No:</label>
+            <input type="text" name="mobile" id="mobile" placeholder="Enter mobile" class="form-control" [(ngModel)]="user.mobile" >
+        </div>
+        <div class="form-group">
+            <label for="age">Age :</label>
+            <input type="text" name="age" id="age" placeholder="Enter age" class="form-control" [(ngModel)]="user.age">
+        </div>
+        <div class="form-group">
+            <label for="address">address :</label>
+            <input type="text" name="address" id="address" placeholder="Enter address" class="form-control" [(ngModel)]="user.address">
+        </div>
+        <div class="form-group">
+            <label for="city">City :</label>
+            <input type="text" name="city" id="city" placeholder="Enter city" class="form-control" [(ngModel)]="user.city" >
+        </div>
+        <div class="form-group">
+            <label for="state">state :</label>
+            <input type="text" name="state" id="state" placeholder="Enter state" class="form-control" [(ngModel)]="user.state" >
+        </div>
+        <div class="form-group">
+            <label for="pincode">Pincode No:</label>
+            <input type="text" name="pincode" id="pincode" placeholder="Enter pincode" class="form-control"  [(ngModel)]="user.pincode">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Enter Password" class="form-control" [(ngModel)]="user.password">
+        </div>
+        
+        <br>
+        <button class="btn btn-primary" type="submit" >Submit</button><br><br>
+        
+    
+    </form>
+</div>

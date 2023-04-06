@@ -1,0 +1,85 @@
+<ng-container *ngIf="product.length>0">
+<div class="container mt-3">
+    <div class="card">
+        <h3 class="d-flex justify-content-center">Order Summary</h3>
+        <div class="card-item">
+            <h3>Product Details</h3>
+            
+        <div class="product" >
+            <table class="table table-bodered table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th><th>Product Name</th><th>Product Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let p of product"  >
+                        <td>{{p.id}}</td>
+                        <td>{{p.name}}</td>
+                        <td>{{p.price}}</td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <h3>Customer Details</h3>
+        
+        <div class="profile " >
+            <table class="table table-bodered table-striped ">
+                <thead>
+                    <tr>
+                        <th>Name</th><th>Email</th>
+                        <th>Address</th><th>City</th><th>State</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        <tr  *ngFor="let c of profile">
+                            <td>{{c.fname}}&nbsp;{{c.lname}}</td>
+                            <td>{{c.email}}</td>
+                            <td>{{c.address}}</td>
+                            <td>{{c.city}}</td>
+                            <td>{{c.state}}</td>
+                        </tr>
+                        <tr >
+                            <td colspan="2"></td>
+                            <td>
+                                <button class="btn btn-danger">Cancel Order</button>
+                            </td>
+                            <td>
+                                <button class="btn btn-primary">Shop More</button>
+                            </td>
+                            <td>
+                                <button class="btn btn-success" (click)="checkout()">Place Order</button>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    </div>
+</div>
+</ng-container>
+
+<ng-container *ngIf="product.length==0">
+    <div class="container mt-3" *ngFor="let p of profile">
+        <div class="card">
+            <div class="card-title"><h3>Hi {{p.fname}}, Order Placed Successfully</h3></div>
+            <div class="card-item justify-content-center">
+                <img src="https://assets.lottiefiles.com/custom_og/lf20_jbrw3hcz.png" alt="">
+                
+            </div>
+            <br>
+            <div class="btn ">
+                <button class="btn btn-danger">Cancel Order</button>&nbsp;
+                    <button class="btn btn-primary" routerLink="/Home">Shop More</button>&nbsp;
+                    <button class="btn btn-success" routerLink="/Home">Home</button>&nbsp;
+                </div>
+        </div>
+        
+    </div>
+    
+</ng-container>

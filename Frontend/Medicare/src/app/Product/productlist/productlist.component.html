@@ -1,0 +1,31 @@
+<div class="container mt-4">
+    <button class="btn " (click)="mainMenu()">
+        <i class="fa-solid fa-arrow-left"></i>
+    </button>
+    <h4>Products</h4><hr>
+    <table class="table table-bodered table-striped">
+        <thead>
+            <tr>
+                <th>Id</th><th>Name</th><th>Seller</th><th>Description</th><th>Price</th><th>Operation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of product">
+                <td>{{p.id}}</td>
+                <td>{{p.name}}</td>
+                <td>{{p.seller}}</td>
+                <td>{{p.description}}</td>
+                <td>{{p.price}}</td>
+                <td>
+                    <a routerLink="/updateProduct/{{p.id}}">
+                        <button class="btn btn-success">Edit</button>
+                    </a>
+                </td>
+                <td>
+                    <button class="btn btn-danger" (click)="deleteProduct(p.id)" type="button">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    

@@ -1,0 +1,31 @@
+<div class="container col-md-6">
+    <button class="btn " routerLink="/dashboard">
+        <i class="fa-solid fa-arrow-left"></i>
+    </button>
+    <h2>Update product</h2><hr>
+<form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="ProductName">Product Name</label>
+        <input type="text" name="ProductName" id="ProductName" placeholder="Enter Product" class="form-control" [(ngModel)]="product.name">
+    </div>
+    <div class="form-group">
+        <label for="seller">Product Seller</label>
+        <input type="text" name="seller" id="seller" placeholder="Enter Product Seller" class="form-control" [(ngModel)]="product.seller">
+    </div>
+    <div class="form-group">
+        <label for="description">Product Description</label>
+        <input type="text" name="description" id="description" placeholder="Enter Product Description" class="form-control" [(ngModel)]="product.description">
+    </div>
+    <div class="form-group">
+        <label for="price">Price</label>
+        <input type="text" name="price" id="price" placeholder="Enter Product Price" class="form-control" [(ngModel)]="product.price">
+    </div>
+    <div class="form-group">
+        <label for="image">Image URL</label>
+        <input type="text" name="image" id="image" placeholder="Enter Product image" class="form-control" [(ngModel)]="product.image">
+    </div>
+    <br>
+    <button class="btn btn-primary" type="submit" >Update</button>
+
+</form>
+</div>

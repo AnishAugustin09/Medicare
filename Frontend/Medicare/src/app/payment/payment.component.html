@@ -1,0 +1,63 @@
+
+<div class=" container mt-4 ">
+    <div class="col-md-3">
+    <ul class="list-group ">
+        <h3>Payment</h3>
+        <li class="list-group-item "><button class="btn" (click)="debitcardpayment()"><i class="fa-solid fa-credit-card"></i>&nbsp;Debit/Credit Card</button></li>
+        <li class="list-group-item"><button class="btn" (click)="upiPayment()">UPI Payment</button></li>
+        <li class="list-group-item"><button class="btn" (click)="netBanking()">Net Banking</button></li>
+        <li class="list-group-item"><button class="btn"(click)="payLater()">Pay Later</button></li>
+        <li class="list-group-item"><button class="btn" (click)="codPayment()">COD</button></li>
+      </ul>
+    </div>
+    <div class="col-md-8" >
+        
+    </div> 
+</div>
+
+
+<ng-container *ngIf="paymentType==1">
+    <div class="container col-md-6"style="transform: translate(10%, -80%);" >
+        <h3><strong>Payment amount :</strong>$ {{grandTotal}}</h3>
+        <div class="form-group col-md-8">
+            <label for="cardname">Name on Card</label>
+            <input type="text" name="cardname" id="cardname" placeholder="Anish Augustin" class="form-control" ><br>
+            <label for="cardNumber">Card Number</label>
+            <input type="text" name="cardNumber" id="cardNumber" placeholder="1234-1234-1234" class="form-control" ><br>
+            <label for="ExpiryDate">ExpiryDate</label>
+            <input type="text" name="ExpiryDate" id="ExpiryDate" placeholder="MM/YY" class="form-control" ><br>
+            <label for="CCV">Enter CCV</label>
+            <input type="text" name="CCV" id="CCV" placeholder="***" class="form-control" >
+            <br>
+
+            <button class="btn btn-primary" routerLink="/ordersummary"><i class="fa-solid fa-lock"></i>&nbsp;Pay $ {{grandTotal}}</button>
+        </div>
+    </div>
+</ng-container>
+<ng-container *ngIf="paymentType==2">
+    <div class="container col-md-7" style="transform: translate(15%, -390%);">
+        <h3>This Payment method is currenty under construction. Kindly choose another method</h3>
+    </div>
+</ng-container>
+<ng-container *ngIf="paymentType==3">
+    <div class="container col-md-6"style="transform: translate(10%, -165%);">
+        <h3><strong>Payment amount :</strong>$ {{grandTotal}}</h3>
+        <div class="form-group">
+            <label for="upi">Enter UPI Id</label>
+            <input type="text" name="upi" id="upi" placeholder="anish1234-03@upi.com" class="form-control" >
+            <br>
+            <button class="btn btn-primary" routerLink="/ordersummary"><i class="fa-solid fa-lock"></i>&nbsp;Pay $ {{grandTotal}}</button>
+        </div>
+    </div>
+</ng-container>
+<ng-container *ngIf="paymentType==4">
+    <div class="container col-md-7"style="transform: translate(15%, -290%);">
+        <h3>Product will Deliever Soon</h3>
+        <button class="btn btn-primary" routerLink="/ordersummary"><i class="fa-solid fa-lock"></i>&nbsp;Order</button>
+    </div>
+</ng-container>
+<ng-container *ngIf="paymentType==5">
+    <div class="container col-md-7"style="transform: translate(15%, -390%);">
+        <h3>This Payment method is currenty under construction. Kindly choose another method</h3>
+    </div>
+</ng-container>
